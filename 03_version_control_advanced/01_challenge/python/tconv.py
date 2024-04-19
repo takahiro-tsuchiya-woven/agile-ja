@@ -9,5 +9,5 @@ def convert_fahrenheit_to_celsius():
     print("Enter the temperature in Fahrenheit:")
     fahrenheit = input()
     fahrenheit = int(fahrenheit)
-    celsius = (fahrenheit * 9/5) + 32
+    celsius = 5 / 9 * (fahrenheit - 32)
     print(f"The Fahrenheit temperature {fahrenheit} you entered is {celsius} in Fahrenheit.")
