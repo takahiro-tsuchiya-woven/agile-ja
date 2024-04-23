@@ -41,17 +41,38 @@ def celsius_to_kelvin():
     print(f"The Celsius temperature {celsius} you entered is {kelvin} in Kelvin.")
 
 def main():
-    print("Enter c if you want to convert from Fahrenheit to Celsius.")
-    print("Enter f if you want to convert from Celsius to Fahrenheit")
+    print("Enter 1 if you want to convert from Fahrenheit to Celsius.")
+    print("Enter 2 if you want to convert from Celsius to Fahrenheit")
+    print("Enter 3 if you want to convert from Kelvin to Fahrenheit")
+    print("Enter 4 if you want to convert from Fahrenheit to Kelvin")
+    print("Enter 5 if you want to convert from Kelvin to Celsius")
+    print("Enter 6 if you want to convert from Celsius to Kelvin")
 
-    user_input = input()
+    is_valid = False
 
-    if user_input == 'c':
-        convert_celsius_to_fahrenheit
-    elif user_input == 'f':
-        convert_fahrenheit_to_celsius
-    else:
-        print("Incorrect input. Please try again later")
+    while not is_valid:
+        user_input = input()
+
+        if user_input == '1':
+            convert_celsius_to_fahrenheit()
+            is_valid = True
+        elif user_input == '2':
+            convert_fahrenheit_to_celsius()
+            is_valid = True
+        elif user_input == '3':
+            kelvin_to_fahrenheit()
+            is_valid = True
+        elif user_input == '4':
+            fahrenheit_to_kelvin()
+            is_valid = True
+        elif user_input == '5':
+            kelvin_to_celsius()
+            is_valid = True
+        elif user_input == '6':
+            celsius_to_kelvin()
+            is_valid = True
+        else:
+            print("Incorrect input. Please try again later")
 
 
 main()
