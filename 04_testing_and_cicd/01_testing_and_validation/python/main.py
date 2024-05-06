@@ -76,3 +76,8 @@ test_greeting()
 # ----難易度: キリマンジャロ----
 
 # `my_assert` 用のテスト `test_my_assert_false` を作成し、式がFalseと評価されたときに指定したオプションの `msg` を適切に返すかどうかをチェックしてください。
+def test_my_assert_false():
+    print(my_assert(my_assert(False, "my_assertのエラーチェック") == "my_assertのエラーチェック", "my_assertのmsgが不正です。"))
+    print(my_assert(my_assert(False) == "Error", "my_assertのmsgが不正です。"))
+
+test_my_assert_false()
